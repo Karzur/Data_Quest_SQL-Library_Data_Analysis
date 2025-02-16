@@ -1,13 +1,17 @@
 select 
-	bookid,
-	case
-		when returndate is null then (current_date - borrowdate)
-	else (returndate - borrowdate)
-	end as borrow_time
+	borrowedbooks.bookid,
+	books.title,
+	SUM(case
+		when borrowedbooks.returndate is null then (current_date - borrowedbooks.borrowdate)
+	else (borrowedbooks.returndate - borrowedbooks.borrowdate)
+	end) as borrow_time
 from borrowedbooks
-order by bookid
+join books on books.bookid = borrowedbooks.bookid
+group by borrowedbooks.bookid, books.title
+order by borrowedbooks.bookid
 
 
-
+/*
 select bookid, borrowdate, returndate from borrowedbooks
 order by bookid
+*/
