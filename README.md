@@ -37,24 +37,31 @@ Standard tasks:
 
 Additional tasks:
 1. Additionally to task 5 find first names and last names for top 10 people.
-2. Identify clients who kept books for at least 3 months in a row in last year.
+2. Identify clients who kept borrowing books for at least 3 months in a row in last year.
 
 ## My process
 
 ### Built with
 
 - PostgreSQL
+- Subqueries
 - CTE
+- Window functions
+- Self join
 
 ### What I learned
 
 1. How to setup Git for projects outside VSC
 2. Revised basic queries
-3. 
+3. Revised CTE
+4. Revised window functions
+5. Learned self join <- turned out to be the hardest
 
 ### Useful resources
 
-- [CTE basics](https://www.sqlpedia.pl/cte-common-table-expressions/) - Website that explains what are common table expressions and how to use them on simple examples
+- [CTE basics](https://www.sqlpedia.pl/cte-common-table-expressions/) - Website that explains what are common table expressions and how to use them on simple examples. CTE used in task 8.
+- [RANK](https://neon.tech/postgresql/postgresql-window-function/postgresql-rank-function) - RANK() function documantation. Used in extra task 1.
+- [Self join](https://stackoverflow.com/questions/71407539/how-to-check-if-a-group-has-three-consecutive-values-in-a-column) - Basically answer for second extra task.
 
 ## Author
 
